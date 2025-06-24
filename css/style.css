@@ -12,3 +12,13 @@ body {
   list-style: none;
   padding: 0;
 }
+
+#posts-list li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 5px;
+}
