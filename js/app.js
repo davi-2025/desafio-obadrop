@@ -8,3 +8,20 @@ const titleInput = document.getElementById('title');
 const bodyInput = document.getElementById('body');
 const cancelBtn = document.getElementById('cancel-btn');
 
+function loadPosts() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(data => {
+      postsList.innerHTML = '';
+      data.forEach(post => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <h3>${post.title}</h3>
+          <p>${post.body}</p>
+          <button onclick="editPost(${post.id}, '${post.title}', '${post.body}')">Editar</button>
+          <button onclick="deletePost(${post.id})">Excluir</button>
+        `;
+        postsList.appendChild(li);
+      });
+    });
+}
