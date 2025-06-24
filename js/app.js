@@ -75,3 +75,19 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+function editPost(id, title, body) {
+  formTitle.innerText = 'Editar Post';
+  formContainer.style.display = 'block';
+  postIdInput.value = id;
+  titleInput.value = title;
+  bodyInput.value = body;
+}
+
+// 6️⃣ Excluir post
+function deletePost(id) {
+  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    method: 'DELETE'
+  }).then(() => {
+    loadPosts();
+  });
+}
