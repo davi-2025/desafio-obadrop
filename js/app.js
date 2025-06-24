@@ -25,3 +25,53 @@ function loadPosts() {
       });
     });
 }
+
+loadPosts();
+
+// 2️⃣ Mostrar formulário para novo post
+newPostBtn.addEventListener('click', () => {
+  formTitle.innerText = 'Novo Post';
+  formContainer.style.display = 'block';
+  postIdInput.value = '';
+  titleInput.value = '';
+  bodyInput.value = '';
+});
+
+cancelBtn.addEventListener('click', () => {
+  formContainer.style.display = 'none';
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const id = postIdInput.value;
+  const title = titleInput.value;
+  const body = bodyInput.value;
+  const postData = {
+    title,
+    body,
+    userId: 1,
+  };
+
+  if (id) {
+    // Editar
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(postData)
+    }).then(() => {
+      loadPosts();
+      formContainer.style.display = 'none';
+    });
+  } else {
+    // Criar novo
+    fetch(`https://jsonplaceholder.typicode.com/posts`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(postData)
+    }).then(() => {
+      loadPosts();
+      formContainer.style.display = 'none';
+    });
+  }
+});
+
