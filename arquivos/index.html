@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Obadrop</title>
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-    
+    <h1>CRUD de Posts (JavaScript Puro)</h1>
+
+    <button id="new-post-btn">Novo Post</button>
+
+    <div id="form-container" style="display:none;">
+        <h2 id="form-title">Novo Post</h2>
+        <form id="post-form">
+            <input type="hidden" id="post-id" />
+            <input type="text" id="title" placeholder="Título" required />
+            <textarea id="body" placeholder="Conteúdo" required></textarea>
+            <button type="submit" id="Save">Salvar</button>
+            <button type="button" id="cancel-btn">Cancelar</button>
+        </form>
+    </div>
+
+    <ul id="posts-list"></ul>
+
+    <script src="../js/app.js"></script>
+
 </body>
 </html>
