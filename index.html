@@ -11,6 +11,14 @@
 
     <button id="new-post-btn">Novo Post</button>
 
-    <div id="form-container" style="display:none;"></div>
+    <div id="form-container" style="display:none;">
+        <h2 id="form-title">Novo Post</h2>
+    <form id="post-form">
+      <input type="hidden" id="post-id" />
+      <input type="text" id="title" placeholder="Título" required />
+      <textarea id="body" placeholder="Conteúdo" required></textarea>
+      <button type="submit">Salvar</button>
+      <button type="button" id="cancel-btn">Cancelar</button>
+    </div>
 </body>
 </html>
