@@ -11,10 +11,12 @@ body {
 }
 
 #Save {
-    background-color: 57, 130, 57;
+    background-color: rgb(57, 130, 57);
     border: none;
     color: white;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
     
 }
 
