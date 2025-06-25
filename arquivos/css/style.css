@@ -17,7 +17,13 @@ body {
     font-weight: bold;
     color: #fff;
     border: 1px solid #fff;
+    transition: background-color 0.3s ease;
 
+}
+
+#new-post-btn:hover {
+    background: #fff;
+    color: #0e1217;
 }
 
 */se estiver bugado basta remover a tag abaixo*/
@@ -35,8 +41,13 @@ body {
     color: white;
     font-weight: bold;
     padding: 10px 15px;
-    border-radius: 5px;
-    
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+#Save:hover {
+    background-color: rgb(14, 144, 12, 1);
+    color: white;
 }
 
 #posts-list {
@@ -63,8 +74,14 @@ button {
     margin: 5px;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: red;
+    background-color: rgb(171, 21, 7, 1);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(181, 1, 23, 1);
+    color: #fff;
 }
