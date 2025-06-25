@@ -8,7 +8,7 @@ FUNCIONALIDADES:
 • Editar post existente
 • Deletar post
 
-Tecnologias Usadas:
+TECNOLOGIAS USADAS:
 • HTML
 • CSS
 • JavaScript
@@ -20,4 +20,4 @@ Como rodar o projeto:
 3. Em seguida, os comandos git clone endereço_arquivo (url)
 4. cd desafio-obadrop (nome do repositório)
 5. Por fim, code . para abrir o arquivo no VS Code.
-6. A partir disso, basta entrar em index.html e tocar na opção LiveServe que fica no canto inferior direito que irá aparecer a interface.
+6. A partir disso, basta entrar em index.html e tocar na opção LiveServe que fica no canto inferior direito para mostrar a interface.
