@@ -10,6 +10,16 @@ body {
   color: #fff;
 }
 
+#new-post-btn {
+    background: #0e1217;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #fff;
+
+}
+
 */se estiver bugado basta remover a tag abaixo*/
 
 #form-container {
