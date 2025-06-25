@@ -28,7 +28,7 @@ function loadPosts() {
 
 loadPosts();
 
-// 2️⃣ Mostrar formulário para novo post
+// Mostrar formulário para novo post
 newPostBtn.addEventListener('click', () => {
   formTitle.innerText = 'Novo Post';
   formContainer.style.display = 'block';
@@ -83,7 +83,7 @@ function editPost(id, title, body) {
   bodyInput.value = body;
 }
 
-// 6️⃣ Excluir post
+// Excluir post
 function deletePost(id) {
   fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     method: 'DELETE'
